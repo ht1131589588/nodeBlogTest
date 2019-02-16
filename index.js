@@ -3,15 +3,13 @@ const express = require("express");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
-const config = require('config-lite')(__dirname);
+const config = require("./config/default");
 const routes = require("./routes");
 const pkg = require('./package');
 const winston = require('winston');
 const expressWinston = require('express-winston');
 
 const app = express();
-
-console.log(process.env.NODE_ENV)
 
 // 设置模板目录
 app.set('views', path.join(__dirname, 'views'));
