@@ -11,6 +11,8 @@ const expressWinston = require('express-winston');
 
 const app = express();
 
+console.log(process.env.NODE_ENV)
+
 // 设置模板目录
 app.set('views', path.join(__dirname, 'views'));
 // 设置模板引擎为 ejs
